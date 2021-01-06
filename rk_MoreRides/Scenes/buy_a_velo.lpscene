@@ -1,0 +1,150 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: none
+
+    SceneStart()
+    PreciseModify()
+    "What do I want to do?"
+    0:: velo_value >= 0:: "Buy a new bicycle"
+    1:: velo_value > 0:: "Sell bicycle"
+    2:: velo_value > 0:: "Trade bicycle for a new one"
+    3:: "Do nothing"
+    
+    If 0
+        Price0 = Random(500, 1000)
+        Price0C = Price0.convertToLocalCurrency(true)
+        Price1 = Random(1500, 3500)
+        Price1C = Price1.convertToLocalCurrency(true)
+        Price2 = Random(4000, 5000)
+        Price2C = Price2.convertToLocalCurrency(true)
+        Price3 = Random(5500, 8000)
+        Price3C = Price3.convertToLocalCurrency(true)
+        Price4 = Random(9000, 14000)
+        Price4C = Price4.convertToLocalCurrency(true)
+        Price5 = Random(15000, 20000)
+        Price5C = Price5.convertToLocalCurrency(true)
+        Price6 = Random(28000, 45000)
+        Price6C = Price6.convertToLocalCurrency(true)
+        Price7 = Random(50000, 75000)
+        Price7C = Price7.convertToLocalCurrency(true)
+        
+        "There are many different price for bicycles there. Honestly, a more expensive bicycle won't really get me from A to B any faster than a cheaper one ... but an expensive bicycle will give me a social advantage."
+        0:: money + velo_value >= Price0:: "BTwin Ultra 920 AF for <Price0C>"
+        1:: money + velo_value >= Price1:: "Rocky Mountain Solo 30 for <Price1C>"
+        2:: money + velo_value >= Price2:: "Giant Defy Advanced Pro 2 for <Price2C>"
+        3:: money + velo_value >= Price3:: "Cannondale SystemSix Carbon Ultegra for <Price3C>"
+        4:: money + velo_value >= Price4:: "Look 795 Blade RS for <Price4C>"
+        5:: money + velo_value >= Price5:: "Specialized WORKS LEVO SL 2021 for <Price5C>"
+        6:: money + velo_value >= Price6:: "Litespeed Blade for <Price6C>"
+        7:: money + velo_value >= Price7:: "Trek Madone7 Diamond for <Price7C>"
+        8:: "Buy nothing"
+        
+        If 0
+            money -= Price0
+            velo_value += Price0
+            stock_velo += 1
+        Elseif 1
+            money -= Price1
+            velo_value += Price1
+            stock_velo += 1
+        Elseif 2
+            money -= Price2
+            velo_value += Price2
+            stock_velo += 1
+        Elseif 3
+            money -= Price3
+            velo_value += Price3
+            stock_velo += 1
+        Elseif 4
+            money -= Price4
+            velo_value += Price4
+            stock_velo += 1
+        Elseif 5
+            money -= Price5
+            velo_value += Price5
+            stock_velo += 1
+        Elseif 6
+            money -= Price6
+            velo_value += Price6
+            stock_velo += 1
+        Elseif 7
+            money -= Price7
+            velo_value += Price7
+            stock_velo += 1
+        Endif
+    Elseif 2
+        SPrice0 = Random(500, 1000)
+        SPrice0C = SPrice0.convertToLocalCurrency(true)
+        SPrice1 = Random(1500, 3500)
+        SPrice1C = SPrice1.convertToLocalCurrency(true)
+        SPrice2 = Random(4000, 5000)
+        SPrice2C = SPrice2.convertToLocalCurrency(true)
+        SPrice3 = Random(5500, 8000)
+        SPrice3C = SPrice3.convertToLocalCurrency(true)
+        SPrice4 = Random(9000, 14000)
+        SPrice4C = SPrice4.convertToLocalCurrency(true)
+        SPrice5 = Random(15000, 20000)
+        SPrice5C = SPrice5.convertToLocalCurrency(true)
+        SPrice6 = Random(28000, 45000)
+        SPrice6C = SPrice6.convertToLocalCurrency(true)
+        SPrice7 = Random(50000, 75000)
+        SPrice7C = SPrice7.convertToLocalCurrency(true)
+        
+        "There are many different options for trading there. Honestly, having a new bicycle won't really change my life... but it's the best way to show off."
+        0:: money + velo_value >= SPrice0:: "BTwin Ultra 920 AF for <SPrice0C>"
+        1:: money + velo_value >= SPrice1:: "Rocky Mountain Solo 30 for <SPrice1C>"
+        2:: money + velo_value >= SPrice2:: "Giant Defy Advanced Pro 2 for <SPrice2C>"
+        3:: money + velo_value >= SPrice3:: "Cannondale SystemSix Carbon Ultegra for <SPrice3C>"
+        4:: money + velo_value >= SPrice4:: "Look 795 Blade RS for <SPrice4C>"
+        5:: money + velo_value >= SPrice5:: "Specialized WORKS LEVO SL 2021 for <SPrice5C>"
+        6:: money + velo_value >= SPrice6:: "Litespeed Blade for <SPrice6C>"
+        7:: money + velo_value >= SPrice7:: "Trek Madone7 Diamond for <SPrice7C>"
+        8:: "Trade nothing"
+        
+        If 0
+            money -= SPrice0 - velo_value
+            velo_value => SPrice0
+        Elseif 1
+            money -= SPrice1 - velo_value
+            velo_value => SPrice1
+        Elseif 2
+            money -= SPrice2 - velo_value
+            velo_value => SPrice2
+        Elseif 3
+            money -= SPrice3 - velo_value
+            velo_value => SPrice3
+        Elseif 4
+            money -= SPrice4 - velo_value
+            velo_value => SPrice4
+        Elseif 5
+            money -= SPrice5 - velo_value
+            velo_value => SPrice5
+        Elseif 6
+            money -= SPrice6 - velo_value
+            velo_value => SPrice6
+        Elseif 7
+            "I get a refund of. My velo value is now <velo_value>"
+            money -= SPrice7 - velo_value
+            velo_value => SPrice7
+        Endif
+    Elseif 1
+        "It's time to sell a bicycle ..."
+        Price = velo_value*interpersonal*Random(0.0045, 0.0115)
+        PriceConverted = Price.convertToLocalCurrency(true)
+        "After some tough negotiation, the best price I could get for the bicycle from this dealer was <PriceConverted>. Should I go ahead with the sale?"
+        0:: "Yes"
+        1:: "No"
+        
+        If 0
+            "That's a fair enough offer I suppose. It's time to say goodbye to that old faithful travel companion then ..."
+            money += Price
+            velo_value -= Price
+            stock_velo -= 1
+        Else
+            "I should look around first. That seems like a low-ball figure they're offering for that bicycle. It must be worth more than that!"
+        Endif
+    Endif
+    
+    SceneEnd()

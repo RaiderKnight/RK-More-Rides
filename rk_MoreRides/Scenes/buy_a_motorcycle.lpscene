@@ -1,0 +1,86 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: none
+
+    SceneStart()
+    PreciseModify()
+    "What do I want to do?"
+    0:: motorcycle_value == 0:: "Buy a new motorcycle"
+    1:: motorcycle_value > 0:: "Sell my motorcycle"
+    2:: motorcycle_value > 0:: "Trade my motorcycle for a new one"
+    3:: "Do nothing"
+    
+    If 0 || 2
+        Price0 = Random(700, 2400)
+        Price0C = Price0.convertToLocalCurrency(true)
+        Price1 = Random(2500, 3500)
+        Price1C = Price1.convertToLocalCurrency(true)
+        Price2 = Random(4000, 5000)
+        Price2C = Price2.convertToLocalCurrency(true)
+        Price3 = Random(5500, 8000)
+        Price3C = Price3.convertToLocalCurrency(true)
+        Price4 = Random(9000, 11000)
+        Price4C = Price4.convertToLocalCurrency(true)
+        Price5 = Random(15000, 20000)
+        Price5C = Price5.convertToLocalCurrency(true)
+        Price6 = Random(28000, 35000)
+        Price6C = Price6.convertToLocalCurrency(true)
+        Price7 = Random(50000, 75000)
+        Price7C = Price7.convertToLocalCurrency(true)
+        
+        "There are many different price for motorcycles there. Honestly, living in a crowded area, a more expensive motorcycle won't really get me from A to B any faster than a cheap motorcycle ..."
+        0:: money + motorcycle_value >= Price0:: "2017 Kawasaki VULCAN VN800 for <Price0C>"
+        1:: money + motorcycle_value >= Price1:: "2021 Honda Ruckus for <Price1C>"
+        2:: money + motorcycle_value >= Price2:: "2021 Yamaha V-Star 250 for <Price2C>"
+        3:: money + motorcycle_value >= Price3:: "2019 Honda NC750X for <Price3C>"
+        4:: money + motorcycle_value >= Price4:: "2019 Husqvarna Svartpilen 701 for <Price4C>"
+        5:: money + motorcycle_value >= Price5:: "2020 Ducati Panigale V2 for <Price5C>"
+        6:: money + motorcycle_value >= Price6:: "2021 INDIAN Challenger for <Price6C>"
+        7:: money + motorcycle_value >= Price7:: "2021 Kawasaki Ninja H2R for <Price7C>"
+        8:: "Buy nothing"
+        
+        If 0
+            money -= Price0 - motorcycle_value
+            motorcycle_value => Price0
+        Elseif 1
+            money -= Price1 - motorcycle_value
+            motorcycle_value => Price1        
+        Elseif 2
+            money -= Price2 - motorcycle_value
+            motorcycle_value => Price2
+        Elseif 3
+            money -= Price3 - motorcycle_value
+            motorcycle_value => Price3
+        Elseif 4
+            money -= Price4 - motorcycle_value
+            motorcycle_value => Price4 
+        Elseif 5
+            money -= Price5 - motorcycle_value
+            motorcycle_value => Price5 
+        Elseif 6
+            money -= Price6 - motorcycle_value
+            motorcycle_value => Price6 
+        Elseif 7
+            money -= Price7 - motorcycle_value
+            motorcycle_value => Price7
+        Endif
+    Elseif 1
+        "It's not worth it after all to have a motorcycle ... I'd rather just walk."
+        Price = motorcycle_value*interpersonal*Random(0.0045, 0.0115)
+        PriceConverted = Price.convertToLocalCurrency(true)
+        "After some tough negotiation, the best price I could get for the motorcycle from this dealership was <PriceConverted>. Should I go ahead with the sale?"
+        0:: "Yes"
+        1:: "No"
+        
+        If 0
+            "That's a fair enough offer I suppose. It's time to say goodbye to my old faithful travel companion then ..."
+            money += Price
+            motorcycle_value => 0
+        Else
+            "I should look around first. That seems like a low-ball figure they're offering for my motorcycle. It must be worth more than that!"
+        Endif
+    Endif
+    
+    SceneEnd()
