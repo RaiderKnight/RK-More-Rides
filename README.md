@@ -4,10 +4,15 @@ https://github.com/vinfamy/LifePlay
 
 
 ### 1- rk_MoreRides  : 
-Add the possibility to buy/sell/trade a motorcycle and/or a bike.
+Add the possibility to buy/sell/trade a motorcycle and/or a bike.  
+8 motorcycle brands.  
+8 bicycle brands.  
+Contain 2 scenes.  
+
 
 ### Module requirements
-None
+At least LifePlay 3.18
+
 
 ### How to install
 Download the mod and add it to : ..\LifePlay\Content\Modules
@@ -18,9 +23,10 @@ c:\..\LifePlay\Content\Modules\rk_MoreRides
 
 NOT
 
-c:\..\LifePlay\Content\Modules\rk_MoreRides\rk_MoreRides
+c:\..\LifePlay\Content\Modules\RK-More-Rides\rk_MoreRides
 
 After the mod have been installed, make sure the mod is active in the Mod Manager. 
+
 
 ### How to update
 * Download and extract the latest version on your pc
