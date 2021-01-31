@@ -3,17 +3,19 @@
 <p>https://github.com/vinfamy/LifePlay</p>
 <br>
 <h3>rk_MoreRides  :</h3>
-<p>Add the possibility to buy/sell/trade a motorcycle and/or a bike.</p> 
+<p>Add the possibility to buy/sell/trade a motorcycle separately.</p>
+<p>Add the possibility to buy/sell/trade a bicycle separately.</p>
 <p>8 motorcycle brands.</p>
 <p>8 bicycle brands.</p>
-<p>Contain 2 scenes.</p> 
+<p>1 garage.</p>
+<p>Contain 3 scenes.</p> 
 <br>
 <hr>
 <br>
 <h3>Module requirements</h3>
 <p>At least LifePlay 3.18</p>
 <br>
-<h3> Module conflict</h3>
+<h3>Module conflict</h3>
 <p>none</p>
 <br>
 <hr>
