@@ -3,6 +3,8 @@
 <p>https://github.com/vinfamy/LifePlay</p>
 <br>
 <h3>rk_MoreRides  :</h3>
+<p>Version: 1.0.1</p>
+<br>
 <p>Add the possibility to buy/sell/trade a motorcycle separately.</p>
 <p>Add the possibility to buy/sell/trade a bicycle separately.</p>
 <p>8 motorcycle brands.</p>
