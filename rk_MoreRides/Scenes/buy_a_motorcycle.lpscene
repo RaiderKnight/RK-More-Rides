@@ -43,14 +43,14 @@ SceneStart()
         Price7C = Price7.convertToLocalCurrency()
         
         "There are many different price for motorcycle here. Honestly, living in a crowded area, a more expensive motorcycle won't really get me from A to B any faster than a cheap motorcycle ..."
-        0:: money >= Price0 :: "2018 Gawasaki VULCAN VN800 for <Price0C>"
-        1:: money >= Price1 :: "2021 BonGa Ruckus for <Price1C>"
-        2:: money >= Price2 :: "2021 Bamaha V-Star 250 for <Price2C>"
-        3:: money >= Price3 :: "2019 BonGa NC750X for <Price3C>"
-        4:: money >= Price4 :: "2019 Rusqvarna Svartpilen 701 for <Price4C>"
-        5:: money >= Price5 :: "2020 Drugati Patigale V2 for <Price5C>"
-        6:: money >= Price6 :: "2021 Russian Challenger for <Price6C>"
-        7:: money >= Price7 :: "2021 Gawasaki Ninja H2R for <Price7C>"
+        0:: money >= Price0 :: "2018 Kawasaki VULCAN VN800 for <Price0C>"
+        1:: money >= Price1 :: "2021 Honda Ruckus for <Price1C>"
+        2:: money >= Price2 :: "2021 Yamaha V-Star 250 for <Price2C>"
+        3:: money >= Price3 :: "2019 Honda NC750X for <Price3C>"
+        4:: money >= Price4 :: "2019 Husqvarna Svartpilen 701 for <Price4C>"
+        5:: money >= Price5 :: "2020 Ducati Panigale V2 for <Price5C>"
+        6:: money >= Price6 :: "2021 INDIAN Challenger for <Price6C>"
+        7:: money >= Price7 :: "2021 Kawasaki Ninja H2R for <Price7C>"
         8:: "Buy nothing"
         
         If 0
@@ -124,13 +124,13 @@ SceneStart()
         Price7S_loc = Price7S.convertToLocalCurrency()
 
         Player::"It's time to sell a motorcycle!"
-        0:: stock_VULCAN >= 1::"Sell 1 Gawasaki VULCAN for <Price0S_loc> | <stock_VULCAN> in garage"
-        1:: stock_Ruckus >= 1::"Sell 1 BonGa Ruckus for <Price1S_loc> | <stock_Ruckus> in garage"
-        2:: stock_VStar >= 1::"Sell 1 Bamaha V-Star for <Price2S_loc> | <stock_VStar> in garage"
-        3:: stock_NC750X >= 1::"Sell 1 BonGa NC750X for <Price3S_loc> | <stock_NC750X> in garage"
+        0:: stock_VULCAN >= 1::"Sell 1 Kawasaki VULCAN for <Price0S_loc> | <stock_VULCAN> in garage"
+        1:: stock_Ruckus >= 1::"Sell 1 Honda Ruckus for <Price1S_loc> | <stock_Ruckus> in garage"
+        2:: stock_VStar >= 1::"Sell 1 Yamaha V-Star for <Price2S_loc> | <stock_VStar> in garage"
+        3:: stock_NC750X >= 1::"Sell 1 Honda NC750X for <Price3S_loc> | <stock_NC750X> in garage"
         4:: stock_Husqvarna >= 1::"Sell 1 Svartpilen 701 for <Price4S_loc> | <stock_Husqvarna> in garage"
-        5:: stock_Ducati >= 1::"Sell 1 Drugati Patigale for <Price5S_loc> | <stock_Ducati> in garage"
-        6:: stock_INDIAN >= 1::"Sell 1 Russian Challenger for <Price6S_loc> | <stock_INDIAN> in garage"
+        5:: stock_Ducati >= 1::"Sell 1 Ducati Panigale for <Price5S_loc> | <stock_Ducati> in garage"
+        6:: stock_INDIAN >= 1::"Sell 1 INDIAN Challenger for <Price6S_loc> | <stock_INDIAN> in garage"
         7:: stock_Ninja >= 1::"Sell 1 Ninja H2R for <Price7S_loc> | <stock_Ninja> in garage"
         99:: "Do nothing"
         
@@ -225,13 +225,13 @@ SceneStart()
         Price7C = Price7.convertToLocalCurrency()
         
         Player::"Let's trade one of my old motorcycle for a new one!"
-        0:: stock_VULCAN >= 1::"Trade 1 Gawasaki VULCAN | <stock_VULCAN> in garage"
-        1:: stock_Ruckus >= 1::"Trade 1 BonGa Ruckus | <stock_Ruckus> in garage"
-        2:: stock_VStar >= 1::"Trade 1 Bamaha V-Star | <stock_VStar> in garage"
-        3:: stock_NC750X >= 1::"Trade 1 BonGa NC750X | <stock_NC750X> in garage"
+        0:: stock_VULCAN >= 1::"Trade 1 Kawasaki VULCAN | <stock_VULCAN> in garage"
+        1:: stock_Ruckus >= 1::"Trade 1 Honda Ruckus | <stock_Ruckus> in garage"
+        2:: stock_VStar >= 1::"Trade 1 Yamaha V-Star | <stock_VStar> in garage"
+        3:: stock_NC750X >= 1::"Trade 1 Honda NC750X | <stock_NC750X> in garage"
         4:: stock_Husqvarna >= 1::"Trade 1 Svartpilen 701 | <stock_Husqvarna> in garage"
-        5:: stock_Ducati >= 1::"Trade 1 Drugati Patigale | <stock_Ducati> in garage"
-        6:: stock_INDIAN >= 1::"Trade 1 Russian Challenger | <stock_INDIAN> in garage"
+        5:: stock_Ducati >= 1::"Trade 1 Ducati Panigale | <stock_Ducati> in garage"
+        6:: stock_INDIAN >= 1::"Trade 1 INDIAN Challenger | <stock_INDIAN> in garage"
         7:: stock_Ninja >= 1::"Trade 1 Ninja H2R | <stock_Ninja> in garage"
         99:: "Do nothing"
         

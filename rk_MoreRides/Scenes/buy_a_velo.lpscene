@@ -44,13 +44,13 @@ SceneStart()
         
         "There are many different price for bicycles there. Honestly, a more expensive bicycle won't really get me from A to B any faster than a cheaper one ... but an expensive bicycle will give me a social advantage."
         0:: money >= Price0:: "BTwin Ultra 920 AF for <Price0C>"
-        1:: money >= Price1:: "Rocxy Mountain Solo 30 for <Price1C>"
-        2:: money >= Price2:: "Jiant Befy Advanced Pro 2 for <Price2C>"
-        3:: money >= Price3:: "Kannondale SystemSix Carbon Ulterus for <Price3C>"
-        4:: money >= Price4:: "Looky 795 XBlade for <Price4C>"
-        5:: money >= Price5:: "Specialized LEVO XXX for <Price5C>"
-        6:: money >= Price6:: "Zitespeed Blade for <Price6C>"
-        7:: money >= Price7:: "Schrek Madone7 Diamond for <Price7C>"
+        1:: money >= Price1:: "Rocky Mountain Solo 30 for <Price1C>"
+        2:: money >= Price2:: "Giant Defy Advanced Pro 2 for <Price2C>"
+        3:: money >= Price3:: "Cannondale SystemSix Carbon Ultegra for <Price3C>"
+        4:: money >= Price4:: "Look 795 Blade RS for <Price4C>"
+        5:: money >= Price5:: "Specialized WORKS LEVO SL 2021 for <Price5C>"
+        6:: money >= Price6:: "Litespeed Blade for <Price6C>"
+        7:: money >= Price7:: "Trek Madone7 Diamond for <Price7C>"
         8:: "Buy nothing"
         
         If 0
@@ -124,61 +124,61 @@ SceneStart()
         
         "It's time to sell a bicycle!"
         0:: stock_BTwin >= 1:: "Sell 1 BTwin Ultra 920 for <SPrice0C> | <stock_BTwin> in garage"
-        1:: stock_Rocky >= 1:: "Sell 1 Rocxy Mountain Solo for <SPrice1C> | <stock_Rocky> in garage"
-        2:: stock_Defy >= 1:: "Sell 1 Jiant Befy Advanced for <SPrice2C> | <stock_Defy> in garage"
-        3:: stock_SystemSix >= 1:: "Sell 1 Kannondale SystemSix for <SPrice3C> | <stock_SystemSix> in garage"
-        4:: stock_Look >= 1:: "Sell 1 Looky 795 XBlade for <SPrice4C> | <stock_Look> in garage"
-        5:: stock_Specialized >= 1:: "Sell 1 Specialized XXX for <SPrice5C> | <stock_Specialized> in garage"
-        6:: stock_Litespeed >= 1:: "Sell 1 Zitespeed Blade for <SPrice6C> | <stock_Litespeed> in garage"
-        7:: stock_Trek >= 1:: "Sell 1 Schrek Madone7 for <SPrice7C> | <stock_Trek> in garage"
+        1:: stock_Rocky >= 1:: "Sell 1 Rocky Mountain Solo for <SPrice1C> | <stock_Rocky> in garage"
+        2:: stock_Defy >= 1:: "Sell 1 Giant Defy Advanced for <SPrice2C> | <stock_Defy> in garage"
+        3:: stock_SystemSix >= 1:: "Sell 1 Cannondale SystemSix for <SPrice3C> | <stock_SystemSix> in garage"
+        4:: stock_Look >= 1:: "Sell 1 Look 795 Blade RS for <SPrice4C> | <stock_Look> in garage"
+        5:: stock_Specialized >= 1:: "Sell 1 Specialized LEVO for <SPrice5C> | <stock_Specialized> in garage"
+        6:: stock_Litespeed >= 1:: "Sell 1 Litespeed Blade for <SPrice6C> | <stock_Litespeed> in garage"
+        7:: stock_Trek >= 1:: "Sell 1 Trek Madone7 for <SPrice7C> | <stock_Trek> in garage"
         99:: "Trade nothing"
         
         If 0
             
             Player.modifyActorVar(stock_BTwin, -1)
-            money -= Price0
+            money += Price0
             Player(Happy)::"<SPrice0C> inside my pockets and more spaces inside my garage!"
             
         Elseif 1
             
             Player.modifyActorVar(stock_Rocky, -1)
-            money -= Price1
+            money += Price1
             Player(Happy)::"<SPrice1C> inside my pockets and more spaces inside my garage!"
             
         Elseif 2
             
             Player.modifyActorVar(stock_Defy, -1)
-            money -= Price2
+            money += Price2
             Player(Happy)::"<SPrice2C> inside my pockets and more spaces inside my garage!"
             
         Elseif 3
             
             Player.modifyActorVar(stock_SystemSix, -1)
-            money -= Price3
+            money += Price3
             Player(Happy)::"<SPrice3C> inside my pockets and more spaces inside my garage!"
             
         Elseif 4
             
             Player.modifyActorVar(stock_Look, -1)
-            money -= Price4
+            money += Price4
             Player(Happy)::"<SPrice4C> inside my pockets and more spaces inside my garage!"
             
         Elseif 5
             
             Player.modifyActorVar(stock_Specialized, -1)
-            money -= Price5
+            money += Price5
             PPlayer(Happy)::"<SPrice5C> inside my pockets and more spaces inside my garage!"
             
         Elseif 6
             
             Player.modifyActorVar(stock_Litespeed, -1)
-            money -= Price6
+            money += Price6
             Player(Happy)::"<SPrice6C> inside my pockets and more spaces inside my garage!"
             
         Elseif 7
             
             Player.modifyActorVar(stock_Trek, -1)
-            money -= Price7
+            money += Price7
             Player(Happy)::"<SPrice7C> inside my pockets and more spaces inside my garage!"
             
         Elseif 99
@@ -223,13 +223,13 @@ SceneStart()
         
         "There are many different options for trading there. Honestly, having a new bicycle won't really change my life... but it's the best way to show off."
         0:: stock_BTwin >= 1:: "Trade 1 BTwin Ultra 920 | <stock_BTwin> in garage"
-        1:: stock_Rocky >= 1:: "Trade 1 Rocxy Mountain Solo | <stock_Rocky> in garage"
-        2:: stock_Defy >= 1:: "Trade 1 Jiant Befy Advanced | <stock_Defy> in garage"
-        3:: stock_SystemSix >= 1:: "Trade 1 Kannondale SystemSix | <stock_SystemSix> in garage"
-        4:: stock_Look >= 1:: "Trade 1 Looky 795 XBlade | <stock_Look> in garage"
-        5:: stock_Specialized >= 1:: "Trade 1 Specialized XXX | <stock_Specialized> in garage"
-        6:: stock_Litespeed >= 1:: "Trade 1 Zitespeed Blade | <stock_Litespeed> in garage"
-        7:: stock_Trek >= 1:: "Trade 1 Schrek Madone7 | <stock_Trek> in garage"
+        1:: stock_Rocky >= 1:: "Trade 1 Rocky Mountain Solo | <stock_Rocky> in garage"
+        2:: stock_Defy >= 1:: "Trade 1 Giant Defy Advanced | <stock_Defy> in garage"
+        3:: stock_SystemSix >= 1:: "Trade 1 Cannondale SystemSix | <stock_SystemSix> in garage"
+        4:: stock_Look >= 1:: "Trade 1 Look 795 Blade RS | <stock_Look> in garage"
+        5:: stock_Specialized >= 1:: "Trade 1 Specialized LEVO | <stock_Specialized> in garage"
+        6:: stock_Litespeed >= 1:: "Trade 1 Litespeed Blade | <stock_Litespeed> in garage"
+        7:: stock_Trek >= 1:: "Trade 1 Trek Madone7 | <stock_Trek> in garage"
         99:: "Trade nothing"
         
         If 0

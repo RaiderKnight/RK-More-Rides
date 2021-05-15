@@ -2,20 +2,20 @@
 <p>Module for the game LifePlay</p>
 <p>https://github.com/vinfamy/LifePlay</p>
 <br>
-<h3>rk_MoreRides  :</h3>
-<p>Version: 1.0.1</p>
+<h3>rk_MoreRides :</h3>
+<p>Version: 1.0.2</p>
 <br>
 <p>Add the possibility to buy/sell/trade a motorcycle separately.</p>
 <p>Add the possibility to buy/sell/trade a bicycle separately.</p>
 <p>8 motorcycle brands.</p>
 <p>8 bicycle brands.</p>
-<p>1 garage.</p>
-<p>Contain 3 scenes.</p> 
+<p>Contain 2 scenes.</p> 
 <br>
 <hr>
 <br>
 <h3>Module requirements</h3>
-<p>At least LifePlay 3.18</p>
+<p>At least the game LifePlay 3.21</p>
+<p><a href="https://github.com/RaiderKnight/RK-Home-Inventories" tilte="Home Inventories Mod">rk_Home_Inventories</a></p>
 <br>
 <h3>Module conflict</h3>
 <p>none</p>
